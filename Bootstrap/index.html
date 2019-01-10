@@ -24,6 +24,15 @@
   <!-- Custom styles for this template -->
   <link href="contents/css/freelancer.min.css" rel="stylesheet">
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123269619-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-123269619-1');
+  </script>
 </head>
 
 <body id="page-top">
@@ -99,23 +108,23 @@
       </ul>
       <br>
       <ul class="list-inline mb-0 text-center">
-          <li class="list-inline-item">
-            <a class="btn btn-primary" style="width: 115px; color: white">
-              <i>Arduino</i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a class="btn btn-primary" style="width: 60px; color: white">
-              <i>WPF</i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-              <a class="btn btn-primary" style="width: 115px; color: white">
-                <i>Raspberry Pi</i>
-              </a>
-            </li>
-        </ul>
-        <br>
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 115px; color: white">
+            <i>Arduino</i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 60px; color: white">
+            <i>WPF</i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 115px; color: white">
+            <i>Raspberry Pi</i>
+          </a>
+        </li>
+      </ul>
+      <br>
       <ul class="list-inline mb-0 text-center">
         <li class="list-inline-item">
           <a class="btn btn-primary" style="width: 70px; color: white">
@@ -156,7 +165,7 @@
         <div class="col-md-6 col-lg-4">
           <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
             <div class="portfolio-item-caption d-flex position-absolute h-100 w-100  bg-primary" style="border-radius: 10px">
-              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white" >
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
                 <i class="fa fa-plus-circle" style="font-size: 195px"></i>
               </div>
             </div>
@@ -331,7 +340,7 @@
 
   <div class="copyright py-4 text-center text-white">
     <div class="container">
-        <small>Marek Sautter 2018</small>
+      <small>Marek Sautter 2018</small>
     </div>
   </div>
 
@@ -350,14 +359,15 @@
       <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="" style="left:30px; top:30px">
         <i class="fas fa-arrow-circle-left" style="font-size: 50px"></i>
       </a>
-      <div class="container text-center" >
+      <div class="container text-center">
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h2 class="text-secondary text-uppercase mb-0">Self Checkout</h2>
             <hr class="star-dark mb-5">
-            <img class="img-fluid mb-5" src="contents/img/icons/selfcheckout.png" alt="Self Checkout" 
-            style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; width: 500px;">
-            <p class="mb-5">Point of sales system reads inventory items from a file and creates classes for each category. Features a login window for the store manager to update inventory, remove items from cart, and restart the system.</p>
+            <img class="img-fluid mb-5" src="contents/img/icons/selfcheckout.png" alt="Self Checkout" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; width: 500px;">
+            <p class="mb-5">Point of sales system reads inventory items from a file and creates classes for each
+              category. Features a login window for the store manager to update inventory, remove items from cart, and
+              restart the system.</p>
             <ul class="list-inline mb-0 text-center">
               <li class="list-inline-item">
                 <a class="btn btn-primary" href="https://docs.microsoft.com/en-us/dotnet/framework/wpf/">
@@ -400,7 +410,9 @@
             <h2 class="text-secondary text-uppercase mb-0">Smart Closet</h2>
             <hr class="star-dark mb-5">
             <img class="img-fluid mb-5" src="contents/img/icons/smartwardrobe.png" alt="Smart Wardrobe" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
-            <p class="mb-5">Desktop application for displaying user's clothing. Connects to MySQL database on web server and creates objects of items at runtime. Allows user to create outfits and save them to the database.</p>
+            <p class="mb-5">Desktop application for displaying user's clothing. Connects to MySQL database on web
+              server and creates objects of items at runtime. Allows user to create outfits and save them to the
+              database.</p>
             <ul class="list-inline mb-0 text-center">
               <li class="list-inline-item">
                 <a class="btn btn-primary" href="https://docs.microsoft.com/en-us/dotnet/framework/wpf/">
@@ -453,7 +465,8 @@
             <h2 class="text-secondary text-uppercase mb-0">Spotify Stats</h2>
             <hr class="star-dark mb-5">
             <img class="img-fluid mb-5" src="contents/img/icons/spotifystats.png" alt="Spotify Stats" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
-            <p class="mb-5">React App for displaying a Spotify user's top tracks, albums, and artists. Front-end built with JavaScript, HTML, CSS and back-end with Express, Node.js, and OAuth 2.0 Authentication.</p>
+            <p class="mb-5">React App for displaying a Spotify user's top tracks, albums, and artists. Front-end built
+              with JavaScript, HTML, CSS and back-end with Express, Node.js, and OAuth 2.0 Authentication.</p>
             <ul class="list-inline mb-0 text-center">
               <li class="list-inline-item">
                 <a class="btn btn-primary" href="https://reactjs.org/">
@@ -490,7 +503,7 @@
   </div>
 
   <!-- Portfolio Modal 4 -->
-  <div class="portfolio-modal mfp-hide" id="portfolio-modal-4" >
+  <div class="portfolio-modal mfp-hide" id="portfolio-modal-4">
     <div class="portfolio-modal-dialog bg-white" style="border-radius: 40px;">
       <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="" style="left:30px; top:30px">
         <i class="fas fa-arrow-circle-left" style="font-size: 50px"></i>
@@ -501,7 +514,8 @@
             <h2 class="text-secondary text-uppercase mb-0">Web Server</h2>
             <hr class="star-dark mb-5">
             <img class="img-fluid mb-5" src="contents/img/icons/webserver.png" alt="Web Server" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
-            <p class="mb-5">Personal LEMP Stack (Linux, Nginx, MySQL, PHP) server deployed on Digital Ocean. Hosts portfolio page, Flask REST API, and several databases for projects.
+            <p class="mb-5">Personal LEMP Stack (Linux, Nginx, MySQL, PHP) server deployed on Digital Ocean. Hosts
+              portfolio page, Flask REST API, and several databases for projects.
             </p>
             <ul class="list-inline mb-0 text-center">
               <li class="list-inline-item">
@@ -529,7 +543,8 @@
             <a class="btn btn-secondary btn-lg rounded-pill portfolio-modal-dismiss" href="" style="width:125px">
               <i class="fas fa-arrow-circle-left"></i>
               &nbsp;Back</a>
-            <a class="btn btn-secondary btn-lg rounded-pill" href="https://github.com/msautter/Personal-Website-2.0" style="width:125px">
+            <a class="btn btn-secondary btn-lg rounded-pill" href="https://github.com/msautter/Personal-Website-2.0"
+              style="width:125px">
               <i class="fab fa-github"></i>
               &nbsp;View</a>
           </div>
@@ -575,7 +590,8 @@
             <h2 class="text-secondary text-uppercase mb-0">Forum API</h2>
             <hr class="star-dark mb-5">
             <img class="img-fluid mb-5" src="contents/img/icons/forumAPI.png" alt="" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
-            <p class="mb-5">Flask API for web-backend engineering course. Implements a SQLite Database in the following:<br>(1) Default SQL Database (2) Partitioned SQL Database (3) NoSQL Database with ScyllaDB</p>
+            <p class="mb-5">Flask API for web-backend engineering course. Implements a SQLite Database in the
+              following:<br>(1) Default SQL Database (2) Partitioned SQL Database (3) NoSQL Database with ScyllaDB</p>
             <ul class="list-inline mb-0 text-center">
               <li class="list-inline-item">
                 <a class="btn btn-primary" href="https://www.python.org/">
