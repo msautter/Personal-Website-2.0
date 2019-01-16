@@ -1,3 +1,5 @@
+{% load static from staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,19 +13,28 @@
   <title>Marek Sautter</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="contents/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
-  <link href="contents/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-  <link rel="shortcut icon" href="contents/img/marek-suit-rounded - background.png">
+  <link rel="shortcut icon" href="{% static 'imgs/marek-suit-rounded - background.png' %}">
   <!-- Plugin CSS -->
-  <link href="contents/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+  <link href="{% static 'vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet" type="text/css">
 
   <!-- Custom styles for this template -->
-  <link href="contents/css/freelancer.min.css" rel="stylesheet">
+  <link href="{% static 'css/freelancer.min.css' %}" rel="stylesheet">
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123269619-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-123269619-1');
+  </script>
 </head>
 
 <body id="page-top">
@@ -41,7 +52,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger bg-secondary" href="https://mareksautter.com">Home</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger bg-secondary" href="#about">About</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger bg-secondary" href="#portfolio">Projects</a>
@@ -55,57 +66,96 @@
   </nav>
 
   <!-- Header -->
-  <!-- <header class="masthead bg-secondary text-white text-center">
+  <header class="masthead bg-secondary text-white text-center">
     <div class="container">
-      <img class="img-fluid mb-5 d-block mx-auto" src="contents/img/marek-suit-filter.png" alt="Marek-Profile">
+      <img class="img-fluid mb-5 d-block mx-auto" src="{% static 'imgs/marek-suit-filter.png' %}" alt="Marek-Profile">
       <h1 class="text-uppercase mb-0">Marek Sautter</h1>
       <hr style="height:5px;border:none;color:white;background-color:white;" />
       <br>
-      <h2 class="font-weight-light mb-0">Software Engineer - Web Developer - User Experience Designer</h2>
+      <h2 class="font-weight-light mb-0">Software Engineer - Web Developer</h2>
     </div>
-  </header> -->
+  </header>
 
 
   <!-- About Section -->
   <section id="about">
-    <br>
-      <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Self Checkout</h2>
-              <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="contents/img/icons/selfcheckout.png" alt="Web Server" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
-              <p class="mb-5">Point of sales system reads inventory items from a file and creates classes for each category. Features a login window for the store manager to update inventory, remove items from cart, and restart the system.
-              </p>
-              <ul class="list-inline mb-0 text-center">
-                  <li class="list-inline-item">
-                    <a class="btn btn-primary" href="https://docs.microsoft.com/en-us/dotnet/framework/wpf/">
-                      <i>WPF</i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a class="btn btn-primary" href="https://docs.microsoft.com/en-us/dotnet/csharp/">
-                      <i>C#</i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a class="btn btn-primary" href="https://docs.microsoft.com/en-us/dotnet/framework/wpf/advanced/xaml-overview-wpf">
-                      <i>XAML</i>
-                    </a>
-                  </li>
-                </ul>
-              <br>
-              <a class="btn btn-secondary btn-lg rounded-pill" href="https://github.com/msautter/Self-Checkout" style="width:125px">
-                <i class="fab fa-github"></i>
-                &nbsp;View</a>
-            </div>
-          </div>
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">About</h2>
+      <hr class="star-dark mb-5">
+      <div class="text-center">
+        <p class="lead">Multidisciplinary Software Engineer and Eagle Scout based in Orange County.</p>
+        <p class="lead">Desktop interfaces, web applications, and embedded systems.</p>
+      </div>
+      <ul class="list-inline mb-0 text-center">
+        <li class="list-inline-item" >
+          <a class="btn btn-primary" style="width: 100px; color: white" href="forum-api.html">
+            <i>Python</i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 50px; color: white" >
+            <i>C++</i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 50px; color: white" href="self-checkout.html">
+            <i>C#</i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 100px; color: white" href="spotify-stats.html">
+            <i>JavaScript</i>
+          </a>
+        </li>
+      </ul>
+      <br>
+      <ul class="list-inline mb-0 text-center">
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 115px; color: white">
+            <i>Arduino</i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 60px; color: white"  href="self-checkout.html">
+            <i>WPF</i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 115px; color: white">
+            <i>Raspberry Pi</i>
+          </a>
+        </li>
+      </ul>
+      <br>
+      <ul class="list-inline mb-0 text-center">
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 70px; color: white"  href="forum-api.html">
+            <i>Flask</i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 60px; color: white" href="smart-closet.html">
+            <i>SQL</i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 60px; color: white" href="web-server.html">
+            <i>PHP</i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 70px; color: white" href="spotify-stats.html">
+            <i>React</i>
+          </a>
+        </li>
+      </ul>
       <div class="text-center mt-4">
-        <a class="btn btn-xl btn-lg bg-secondary text-white btn-outline-light" href="Marek-Resume.pdf" style="border-radius: 10px">
+        <a class="btn btn-xl btn-lg bg-secondary text-white btn-outline-light" href="{% static 'resume.pdf' %}" style="border-radius: 10px">
           <i class="fas fa-download mr-2"></i>
-          Marek-Resume.pdf
+          Resume
         </a>
       </div>
+    </div>
   </section>
 
   <!-- Portfolio Grid Section -->
@@ -117,11 +167,11 @@
         <div class="col-md-6 col-lg-4">
           <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
             <div class="portfolio-item-caption d-flex position-absolute h-100 w-100  bg-primary" style="border-radius: 10px">
-              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white" >
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
                 <i class="fa fa-plus-circle" style="font-size: 195px"></i>
               </div>
             </div>
-            <img class="img-fluid" src="contents/img/icons/selfcheckout.png" alt="Self Checkout" style="border-radius: 10px">
+            <img class="img-fluid" src="{% static 'imgs/icons/selfcheckout.png' %}" alt="Self Checkout" style="border-radius: 10px">
           </a>
         </div>
         <div class="col-md-6 col-lg-4">
@@ -131,7 +181,7 @@
                 <i class="fa fa-plus-circle" style="font-size: 195px"></i>
               </div>
             </div>
-            <img class="img-fluid" src="contents/img/icons/smartwardrobe.png" alt="" style="border-radius: 10px">
+            <img class="img-fluid" src="{% static 'imgs/icons/smartwardrobe.png' %}" alt="" style="border-radius: 10px">
           </a>
         </div>
         <div class="col-md-6 col-lg-4">
@@ -141,7 +191,7 @@
                 <i class="fa fa-plus-circle" style="font-size: 195px"></i>
               </div>
             </div>
-            <img class="img-fluid" src="contents/img/icons/spotifystats.png" alt="" style="border-radius: 10px">
+            <img class="img-fluid" src="{% static 'imgs/icons/spotifystats.png' %}" alt="" style="border-radius: 10px">
           </a>
         </div>
         <div class="col-md-6 col-lg-4">
@@ -151,7 +201,7 @@
                 <i class="fa fa-plus-circle" style="font-size: 195px"></i>
               </div>
             </div>
-            <img class="img-fluid" src="contents/img/icons/webserver.png" alt="" style="border-radius: 10px">
+            <img class="img-fluid" src="{% static 'imgs/icons/webserver.png' %}" alt="" style="border-radius: 10px">
           </a>
         </div>
         <div class="col-md-6 col-lg-4">
@@ -161,7 +211,7 @@
                 <i class="fa fa-plus-circle" style="font-size: 195px"></i>
               </div>
             </div>
-            <img class="img-fluid" src="contents/img/icons/chip.png" alt="" style="border-radius: 10px">
+            <img class="img-fluid" src="{% static 'imgs/icons/chip.png' %}" alt="" style="border-radius: 10px">
           </a>
         </div>
         <div class="col-md-6 col-lg-4">
@@ -171,7 +221,7 @@
                 <i class="fa fa-plus-circle" style="font-size: 195px"></i>
               </div>
             </div>
-            <img class="img-fluid" src="contents/img/icons/forumAPI.png" alt="" style="border-radius: 10px">
+            <img class="img-fluid" src="{% static 'imgs/icons/forumAPI.png' %}" alt="" style="border-radius: 10px">
           </a>
         </div>
       </div>
@@ -284,7 +334,7 @@
           <h4 class="text-uppercase mb-4">This Website</h4>
           <p class="lead mb-0"> Created with
             <a href="http://startbootstrap.com">Bootstrap</a>, hosted on <a href="http://digitalocean.com">Digital
-              Ocean</a> , and available on <a href="https://github.com/msautter/Personal-Website-2.0">Github</a>.</p>
+              Ocean</a> , and available on <a href="https://github.com/msautter/Personal-Website-2.0">Github</a>. <br> <small>Updated: 1-12-19</small></p>
         </div>
       </div>
     </div>
@@ -311,14 +361,15 @@
       <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="" style="left:30px; top:30px">
         <i class="fas fa-arrow-circle-left" style="font-size: 50px"></i>
       </a>
-      <div class="container text-center" >
+      <div class="container text-center">
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h2 class="text-secondary text-uppercase mb-0">Self Checkout</h2>
             <hr class="star-dark mb-5">
-            <img class="img-fluid mb-5" src="contents/img/icons/selfcheckout.png" alt="Self Checkout" 
-            style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; width: 500px;">
-            <p class="mb-5">Point of sales system reads inventory items from a file and creates classes for each category. Features a login window for the store manager to update inventory, remove items from cart, and restart the system.</p>
+            <img class="img-fluid mb-5" src="{% static 'imgs/icons/selfcheckout.png' %}" alt="Self Checkout" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; width: 500px;">
+            <p class="mb-5">Point of sales system reads inventory items from a file and creates classes for each
+              category. Features a login window for the store manager to update inventory, remove items from cart, and
+              restart the system.</p>
             <ul class="list-inline mb-0 text-center">
               <li class="list-inline-item">
                 <a class="btn btn-primary" href="https://docs.microsoft.com/en-us/dotnet/framework/wpf/">
@@ -360,8 +411,10 @@
           <div class="col-lg-8 mx-auto">
             <h2 class="text-secondary text-uppercase mb-0">Smart Closet</h2>
             <hr class="star-dark mb-5">
-            <img class="img-fluid mb-5" src="contents/img/icons/smartwardrobe.png" alt="Smart Wardrobe" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
-            <p class="mb-5">Desktop application for displaying user's clothing. Connects to MySQL database on web server and creates objects of items at runtime. Allows user to create outfits and save them to the database.</p>
+            <img class="img-fluid mb-5" src="{% static 'imgs/icons/smartwardrobe.png' %}" alt="Smart Wardrobe" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
+            <p class="mb-5">Desktop application for displaying user's clothing. Connects to MySQL database on web
+              server and creates objects of items at runtime. Allows user to create outfits and save them to the
+              database.</p>
             <ul class="list-inline mb-0 text-center">
               <li class="list-inline-item">
                 <a class="btn btn-primary" href="https://docs.microsoft.com/en-us/dotnet/framework/wpf/">
@@ -413,8 +466,9 @@
           <div class="col-lg-8 mx-auto">
             <h2 class="text-secondary text-uppercase mb-0">Spotify Stats</h2>
             <hr class="star-dark mb-5">
-            <img class="img-fluid mb-5" src="contents/img/icons/spotifystats.png" alt="Spotify Stats" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
-            <p class="mb-5">React App for displaying a Spotify user's top tracks, albums, and artists. Front-end built with JavaScript, HTML, CSS and back-end with Express, Node.js, and OAuth 2.0 Authentication.</p>
+            <img class="img-fluid mb-5" src="{% static 'imgs/icons/spotifystats.png' %}" alt="Spotify Stats" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
+            <p class="mb-5">React App for displaying a Spotify user's top tracks, albums, and artists. Front-end built
+              with JavaScript, HTML, CSS and back-end with Express, Node.js, and OAuth 2.0 Authentication.</p>
             <ul class="list-inline mb-0 text-center">
               <li class="list-inline-item">
                 <a class="btn btn-primary" href="https://reactjs.org/">
@@ -451,7 +505,7 @@
   </div>
 
   <!-- Portfolio Modal 4 -->
-  <div class="portfolio-modal mfp-hide" id="portfolio-modal-4" >
+  <div class="portfolio-modal mfp-hide" id="portfolio-modal-4">
     <div class="portfolio-modal-dialog bg-white" style="border-radius: 40px;">
       <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="" style="left:30px; top:30px">
         <i class="fas fa-arrow-circle-left" style="font-size: 50px"></i>
@@ -461,8 +515,9 @@
           <div class="col-lg-8 mx-auto">
             <h2 class="text-secondary text-uppercase mb-0">Web Server</h2>
             <hr class="star-dark mb-5">
-            <img class="img-fluid mb-5" src="contents/img/icons/webserver.png" alt="Web Server" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
-            <p class="mb-5">Personal LEMP Stack (Linux, Nginx, MySQL, PHP) server deployed on Digital Ocean. Hosts portfolio page, Flask REST API, and several databases for projects.
+            <img class="img-fluid mb-5" src="{% static 'imgs/icons/webserver.png' %}" alt="Web Server" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
+            <p class="mb-5">Personal LEMP Stack (Linux, Nginx, MySQL, PHP) server deployed on Digital Ocean. Hosts
+              portfolio page, Flask REST API, and several databases for projects.
             </p>
             <ul class="list-inline mb-0 text-center">
               <li class="list-inline-item">
@@ -490,7 +545,8 @@
             <a class="btn btn-secondary btn-lg rounded-pill portfolio-modal-dismiss" href="" style="width:125px">
               <i class="fas fa-arrow-circle-left"></i>
               &nbsp;Back</a>
-            <a class="btn btn-secondary btn-lg rounded-pill" href="https://github.com/msautter/Personal-Website-2.0" style="width:125px">
+            <a class="btn btn-secondary btn-lg rounded-pill" href="https://github.com/msautter/Personal-Website-2.0"
+              style="width:125px">
               <i class="fab fa-github"></i>
               &nbsp;View</a>
           </div>
@@ -510,7 +566,7 @@
           <div class="col-lg-8 mx-auto">
             <h2 class="text-secondary text-uppercase mb-0">Coming Soon</h2>
             <hr class="star-dark mb-5">
-            <img class="img-fluid mb-5" src="contents/img/icons/chip.png" alt="Coming Soon" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
+            <img class="img-fluid mb-5" src="{% static 'imgs/icons/chip.png' %}" alt="Coming Soon" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
             <p class="mb-5">Project in development.</p>
             <a class="btn btn-secondary btn-lg rounded-pill portfolio-modal-dismiss" href="" style="width:125px">
               <i class="fas fa-arrow-circle-left"></i>
@@ -535,8 +591,9 @@
           <div class="col-lg-8 mx-auto">
             <h2 class="text-secondary text-uppercase mb-0">Forum API</h2>
             <hr class="star-dark mb-5">
-            <img class="img-fluid mb-5" src="contents/img/icons/forumAPI.png" alt="" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
-            <p class="mb-5">Flask API for web-backend engineering course. Implements a SQLite Database in the following:<br>(1) Default SQL Database (2) Partitioned SQL Database (3) NoSQL Database with ScyllaDB</p>
+            <img class="img-fluid mb-5" src="{% static 'imgs/icons/forumAPI.png' %}" alt="" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
+            <p class="mb-5">Flask API for web-backend engineering course. Implements a SQLite Database in the
+              following:<br>(1) Default SQL Database (2) Partitioned SQL Database (3) NoSQL Database with ScyllaDB</p>
             <ul class="list-inline mb-0 text-center">
               <li class="list-inline-item">
                 <a class="btn btn-primary" href="https://www.python.org/">
@@ -578,19 +635,19 @@
   </div>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="contents/vendor/jquery/jquery.min.js"></script>
-  <script src="contents/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
   <!-- Plugin JavaScript -->
-  <script src="contents/vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="contents/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
 
   <!-- Contact Form JavaScript -->
-  <script src="contents/js/jqBootstrapValidation.js"></script>
-  <script src="contents/js/contact_me.js"></script>
+  <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+  <script src="{% static 'js/contact_me.js' %}"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="contents/js/freelancer.min.js"></script>
+  <script src="{% static 'js/freelancer.min.js' %}"></script>
 
 </body>
 

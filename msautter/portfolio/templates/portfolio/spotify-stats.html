@@ -1,30 +1,32 @@
+{% load static from staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Personal Website and Portfolio for Marek Sautter">
-  <meta name="author" content="Marek Sautter">
-
-  <title>Marek Sautter</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="contents/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
-  <link href="contents/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-  <link rel="shortcut icon" href="contents/img/marek-suit-rounded - background.png">
-  <!-- Plugin CSS -->
-  <link href="contents/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-
-  <!-- Custom styles for this template -->
-  <link href="contents/css/freelancer.min.css" rel="stylesheet">
-
-</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Personal Website and Portfolio for Marek Sautter">
+    <meta name="author" content="Marek Sautter">
+  
+    <title>Marek Sautter</title>
+  
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  
+    <!-- Custom fonts for this template -->
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="{% static 'imgs/marek-suit-rounded - background.png' %}">
+    <!-- Plugin CSS -->
+    <link href="{% static 'vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet" type="text/css">
+  
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/freelancer.min.css' %}" rel="stylesheet">
+  
+  </head>
 
 <body id="page-top">
 
@@ -57,7 +59,7 @@
   <!-- Header -->
   <!-- <header class="masthead bg-secondary text-white text-center">
     <div class="container">
-      <img class="img-fluid mb-5 d-block mx-auto" src="contents/img/marek-suit-filter.png" alt="Marek-Profile">
+      <img class="img-fluid mb-5 d-block mx-auto" src="contents/imgs/marek-suit-filter.png" alt="Marek-Profile">
       <h1 class="text-uppercase mb-0">Marek Sautter</h1>
       <hr style="height:5px;border:none;color:white;background-color:white;" />
       <br>
@@ -74,7 +76,7 @@
             <div class="col-lg-8 mx-auto">
               <h2 class="text-secondary text-uppercase mb-0">Spotify Stats</h2>
               <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="contents/img/icons/spotifystats.png" alt="Spotify Stats" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
+              <img class="img-fluid mb-5" src="contents/imgs/icons/spotifystats.png" alt="Spotify Stats" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
               <p class="mb-5">React App for displaying a Spotify user's top tracks, albums, and artists. Front-end built with JavaScript, HTML, CSS and back-end with Express, Node.js, and OAuth 2.0 Authentication.</p>
               <ul class="list-inline mb-0 text-center">
                 <li class="list-inline-item">
@@ -112,75 +114,75 @@
       </div>
   </section>
 
-  <!-- Portfolio Grid Section -->
-  <section class="portfolio" id="portfolio">
-    <div class="container">
-      <h2 class="masthead text-center">Projects</h2>
-      <hr class="star-dark">
-      <div class="row">
-        <div class="col-md-6 col-lg-4">
-          <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
-            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100  bg-primary" style="border-radius: 10px">
-              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white" >
-                <i class="fa fa-plus-circle" style="font-size: 195px"></i>
+    <!-- Portfolio Grid Section -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <h2 class="masthead text-center">Projects</h2>
+        <hr class="star-dark">
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="https://mareksautter.com/self-checkout">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100  bg-primary" style="border-radius: 10px">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white" >
+                  <i class="fa fa-plus-circle" style="font-size: 195px"></i>
+                </div>
               </div>
-            </div>
-            <img class="img-fluid" src="contents/img/icons/selfcheckout.png" alt="Self Checkout" style="border-radius: 10px">
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
-            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100 bg-primary" style="border-radius: 10px">
-              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                <i class="fa fa-plus-circle" style="font-size: 195px"></i>
+              <img class="img-fluid" src="{% static 'imgs/icons/selfcheckout.png' %}" alt="Self Checkout" style="border-radius: 10px">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="https://mareksautter.com/smart-closet">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100 bg-primary" style="border-radius: 10px">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-plus-circle" style="font-size: 195px"></i>
+                </div>
               </div>
-            </div>
-            <img class="img-fluid" src="contents/img/icons/smartwardrobe.png" alt="" style="border-radius: 10px">
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100 bg-primary" style="border-radius: 10px">
-              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                <i class="fa fa-plus-circle" style="font-size: 195px"></i>
+              <img class="img-fluid" src="{% static 'imgs/icons/smartwardrobe.png' %}" alt="Smart Closet" style="border-radius: 10px">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="https://mareksautter.com/spotify-stats">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100 bg-primary" style="border-radius: 10px">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-plus-circle" style="font-size: 195px"></i>
+                </div>
               </div>
-            </div>
-            <img class="img-fluid" src="contents/img/icons/spotifystats.png" alt="" style="border-radius: 10px">
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
-            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100 bg-primary" style="border-radius: 10px">
-              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                <i class="fa fa-plus-circle" style="font-size: 195px"></i>
+              <img class="img-fluid" src="{% static 'imgs/icons/spotifystats.png' %}" alt="Spotify Stats" style="border-radius: 10px">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="https://mareksautter.com/web-server">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100 bg-primary" style="border-radius: 10px">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-plus-circle" style="font-size: 195px"></i>
+                </div>
               </div>
-            </div>
-            <img class="img-fluid" src="contents/img/icons/webserver.png" alt="" style="border-radius: 10px">
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
-            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100 bg-primary" style="border-radius: 10px">
-              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                <i class="fa fa-plus-circle" style="font-size: 195px"></i>
+              <img class="img-fluid" src="{% static 'imgs/icons/webserver.png' %}" alt="Web Server" style="border-radius: 10px">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="https://mareksautter.com/weather-app">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100 bg-primary" style="border-radius: 10px">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-plus-circle" style="font-size: 195px"></i>
+                </div>
               </div>
-            </div>
-            <img class="img-fluid" src="contents/img/icons/chip.png" alt="" style="border-radius: 10px">
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100 bg-primary" style="border-radius: 10px">
-              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                <i class="fa fa-plus-circle" style="font-size: 195px"></i>
+              <img class="img-fluid" src="{% static 'imgs/icons/chip.png' %}" alt="Coming Soon" style="border-radius: 10px">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="https://mareksautter.com/forum-api">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100 bg-primary" style="border-radius: 10px">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-plus-circle" style="font-size: 195px"></i>
+                </div>
               </div>
-            </div>
-            <img class="img-fluid" src="contents/img/icons/forumAPI.png" alt="" style="border-radius: 10px">
-          </a>
+              <img class="img-fluid" src="{% static 'imgs/icons/forumAPI.png' %}" alt="Forum API" style="border-radius: 10px">
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
 
   <!-- Contact Section -->
@@ -320,7 +322,7 @@
           <div class="col-lg-8 mx-auto">
             <h2 class="text-secondary text-uppercase mb-0">Self Checkout</h2>
             <hr class="star-dark mb-5">
-            <img class="img-fluid mb-5" src="contents/img/icons/selfcheckout.png" alt="Self Checkout" 
+            <img class="img-fluid mb-5" src="contents/imgs/icons/selfcheckout.png" alt="Self Checkout" 
             style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; width: 500px;">
             <p class="mb-5">Point of sales system reads inventory items from a file and creates classes for each category. Features a login window for the store manager to update inventory, remove items from cart, and restart the system.</p>
             <ul class="list-inline mb-0 text-center">
@@ -364,7 +366,7 @@
           <div class="col-lg-8 mx-auto">
             <h2 class="text-secondary text-uppercase mb-0">Smart Closet</h2>
             <hr class="star-dark mb-5">
-            <img class="img-fluid mb-5" src="contents/img/icons/smartwardrobe.png" alt="Smart Wardrobe" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
+            <img class="img-fluid mb-5" src="contents/imgs/icons/smartwardrobe.png" alt="Smart Wardrobe" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
             <p class="mb-5">Desktop application for displaying user's clothing. Connects to MySQL database on web server and creates objects of items at runtime. Allows user to create outfits and save them to the database.</p>
             <ul class="list-inline mb-0 text-center">
               <li class="list-inline-item">
@@ -417,7 +419,7 @@
           <div class="col-lg-8 mx-auto">
             <h2 class="text-secondary text-uppercase mb-0">Spotify Stats</h2>
             <hr class="star-dark mb-5">
-            <img class="img-fluid mb-5" src="contents/img/icons/spotifystats.png" alt="Spotify Stats" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
+            <img class="img-fluid mb-5" src="contents/imgs/icons/spotifystats.png" alt="Spotify Stats" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
             <p class="mb-5">React App for displaying a Spotify user's top tracks, albums, and artists. Front-end built with JavaScript, HTML, CSS and back-end with Express, Node.js, and OAuth 2.0 Authentication.</p>
             <ul class="list-inline mb-0 text-center">
               <li class="list-inline-item">
@@ -465,7 +467,7 @@
           <div class="col-lg-8 mx-auto">
             <h2 class="text-secondary text-uppercase mb-0">Web Server</h2>
             <hr class="star-dark mb-5">
-            <img class="img-fluid mb-5" src="contents/img/icons/webserver.png" alt="Web Server" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
+            <img class="img-fluid mb-5" src="contents/imgs/icons/webserver.png" alt="Web Server" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
             <p class="mb-5">Personal LEMP Stack (Linux, Nginx, MySQL, PHP) server deployed on Digital Ocean. Hosts portfolio page, Flask REST API, and several databases for projects.
             </p>
             <ul class="list-inline mb-0 text-center">
@@ -514,7 +516,7 @@
           <div class="col-lg-8 mx-auto">
             <h2 class="text-secondary text-uppercase mb-0">Coming Soon</h2>
             <hr class="star-dark mb-5">
-            <img class="img-fluid mb-5" src="contents/img/icons/chip.png" alt="Coming Soon" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
+            <img class="img-fluid mb-5" src="contents/imgs/icons/chip.png" alt="Coming Soon" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
             <p class="mb-5">Project in development.</p>
             <a class="btn btn-secondary btn-lg rounded-pill portfolio-modal-dismiss" href="" style="width:125px">
               <i class="fas fa-arrow-circle-left"></i>
@@ -539,7 +541,7 @@
           <div class="col-lg-8 mx-auto">
             <h2 class="text-secondary text-uppercase mb-0">Forum API</h2>
             <hr class="star-dark mb-5">
-            <img class="img-fluid mb-5" src="contents/img/icons/forumAPI.png" alt="" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
+            <img class="img-fluid mb-5" src="contents/imgs/icons/forumAPI.png" alt="" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
             <p class="mb-5">Flask API for web-backend engineering course. Implements a SQLite Database in the following:<br>(1) Default SQL Database (2) Partitioned SQL Database (3) NoSQL Database with ScyllaDB</p>
             <ul class="list-inline mb-0 text-center">
               <li class="list-inline-item">
@@ -582,19 +584,19 @@
   </div>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="contents/vendor/jquery/jquery.min.js"></script>
-  <script src="contents/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
   <!-- Plugin JavaScript -->
-  <script src="contents/vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="contents/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
 
   <!-- Contact Form JavaScript -->
-  <script src="contents/js/jqBootstrapValidation.js"></script>
-  <script src="contents/js/contact_me.js"></script>
+  <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+  <script src="{% static 'js/contact_me.js' %}"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="contents/js/freelancer.min.js"></script>
+  <script src="{% static 'js/freelancer.min.js' %}"></script>
 
 </body>
 
