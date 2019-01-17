@@ -1,0 +1,654 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Personal Website and Portfolio for Marek Sautter">
+  <meta name="author" content="Marek Sautter">
+
+  <title>Marek Sautter</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'portfolio/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="{% static 'portfolio/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="{% static 'portfolio/imgs/marek-suit-rounded - background.png' %}">
+  <!-- Plugin CSS -->
+  <link href="{% static 'portfolio/vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'portfolio/css/freelancer.min.css' %}" rel="stylesheet">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123269619-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-123269619-1');
+  </script>
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-primary fixed-top text-uppercase" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase bg-secondary text-white rounded" type="button"
+        data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger bg-secondary" href="#about">About</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger bg-secondary" href="#portfolio">Projects</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger bg-secondary" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead bg-secondary text-white text-center">
+    <div class="container">
+      <img class="img-fluid mb-5 d-block mx-auto" src="{% static 'portfolio/imgs/marek-suit-filter.png' %}" alt="Marek-Profile">
+      <h1 class="text-uppercase mb-0">Marek Sautter</h1>
+      <hr style="height:5px;border:none;color:white;background-color:white;" />
+      <br>
+      <h2 class="font-weight-light mb-0">Software Engineer - Web Developer</h2>
+    </div>
+  </header>
+
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">About</h2>
+      <hr class="star-dark mb-5">
+      <div class="text-center">
+        <p class="lead">Multidisciplinary Software Engineer and Eagle Scout based in Orange County.</p>
+        <p class="lead">Desktop interfaces, web applications, and embedded systems.</p>
+      </div>
+      <ul class="list-inline mb-0 text-center">
+        <li class="list-inline-item" >
+          <a class="btn btn-primary" style="width: 100px; color: white" href="forum-api.html">
+            <i>Python</i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 50px; color: white" >
+            <i>C++</i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 50px; color: white" href="self-checkout.html">
+            <i>C#</i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 100px; color: white" href="spotify-stats.html">
+            <i>JavaScript</i>
+          </a>
+        </li>
+      </ul>
+      <br>
+      <ul class="list-inline mb-0 text-center">
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 115px; color: white">
+            <i>Arduino</i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 60px; color: white"  href="self-checkout.html">
+            <i>WPF</i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 115px; color: white">
+            <i>Raspberry Pi</i>
+          </a>
+        </li>
+      </ul>
+      <br>
+      <ul class="list-inline mb-0 text-center">
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 70px; color: white"  href="forum-api.html">
+            <i>Flask</i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 60px; color: white" href="smart-closet.html">
+            <i>SQL</i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 60px; color: white" href="web-server.html">
+            <i>PHP</i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn btn-primary" style="width: 70px; color: white" href="spotify-stats.html">
+            <i>React</i>
+          </a>
+        </li>
+      </ul>
+      <div class="text-center mt-4">
+        <a class="btn btn-xl btn-lg bg-secondary text-white btn-outline-light" href="{% static 'portfolio/resume.pdf' %}" style="border-radius: 10px">
+          <i class="fas fa-download mr-2"></i>
+          Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Grid Section -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <h2 class="masthead text-center">Projects</h2>
+      <hr class="star-dark">
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100  bg-primary" style="border-radius: 10px">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fa fa-plus-circle" style="font-size: 195px"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="{% static 'portfolio/imgs/icons/selfcheckout.png' %}" alt="Self Checkout" style="border-radius: 10px">
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100 bg-primary" style="border-radius: 10px">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fa fa-plus-circle" style="font-size: 195px"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="{% static 'portfolio/imgs/icons/smartwardrobe.png' %}" alt="" style="border-radius: 10px">
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100 bg-primary" style="border-radius: 10px">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fa fa-plus-circle" style="font-size: 195px"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="{% static 'portfolio/imgs/icons/spotifystats.png' %}" alt="" style="border-radius: 10px">
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100 bg-primary" style="border-radius: 10px">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fa fa-plus-circle" style="font-size: 195px"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="{% static 'portfolio/imgs/icons/webserver.png' %}" alt="" style="border-radius: 10px">
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100 bg-primary" style="border-radius: 10px">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fa fa-plus-circle" style="font-size: 195px"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="{% static 'portfolio/imgs/icons/chip.png' %}" alt="" style="border-radius: 10px">
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100 bg-primary" style="border-radius: 10px">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fa fa-plus-circle" style="font-size: 195px"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="{% static 'portfolio/imgs/icons/forumAPI.png' %}" alt="" style="border-radius: 10px">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Contact</h2>
+      <hr class="star-dark mb-5">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <form name="sentMessage" id="contactForm" novalidate="novalidate">
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Name</label>
+                <input class="form-control" id="name" type="text" placeholder="Name" required="required"
+                  data-validation-required-message="Please enter your name.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Email Address</label>
+                <input class="form-control" id="email" type="email" placeholder="Email Address" required="required"
+                  data-validation-required-message="Please enter your email address.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Phone Number</label>
+                <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required"
+                  data-validation-required-message="Please enter your phone number.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Message</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required"
+                  data-validation-required-message="Please enter a message."></textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <br>
+            <div id="success"></div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">Location</h4>
+          <p class="lead mb-0">555 N Commonwealth Ave
+            <br>Fullerton, CA 92831</p>
+        </div>
+        <div class="col-md-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">Find me online!</h4>
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item">
+              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://stackoverflow.com/users/9715166/msautt">
+                <i class="fab fa-fw fa-stack-overflow"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://github.com/msautter">
+                <i class="fab fa-fw fa-github"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://codepen.io/msautter/">
+                <i class="fab fa-codepen"></i>
+              </a>
+            </li>
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.linkedin.com/in/masautt/">
+                  <i class="fab fa-fw fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.instagram.com/marek.zip/">
+                  <i class="fab fa-fw fa-instagram"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://twitter.com/ElDoubleOK">
+                  <i class="fab fa-fw fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.reddit.com/user/ElDoubleOK/">
+                  <i class="fab fa-reddit-alien"></i>
+                </a>
+              </li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+          <h4 class="text-uppercase mb-4">This Website</h4>
+          <p class="lead mb-0"> Created with
+            <a href="http://startbootstrap.com">Bootstrap</a>, hosted on <a href="http://digitalocean.com">Digital
+              Ocean</a> , and available on <a href="https://github.com/msautter/Personal-Website-2.0">Github</a>. <br> <small>Updated: 1-12-19</small></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="copyright py-4 text-center text-white">
+    <div class="container">
+      <small>Marek Sautter 2018</small>
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+  <div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+  <!-- Portfolio Modals -->
+
+  <!-- Portfolio Modal 1 -->
+  <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
+    <div class="portfolio-modal-dialog bg-white" style="border-radius: 40px;">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="" style="left:30px; top:30px">
+        <i class="fas fa-arrow-circle-left" style="font-size: 50px"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-secondary text-uppercase mb-0">Self Checkout</h2>
+            <hr class="star-dark mb-5">
+            <img class="img-fluid mb-5" src="{% static 'portfolio/imgs/icons/selfcheckout.png' %}" alt="Self Checkout" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; width: 500px;">
+            <p class="mb-5">Point of sales system reads inventory items from a file and creates classes for each
+              category. Features a login window for the store manager to update inventory, remove items from cart, and
+              restart the system.</p>
+            <ul class="list-inline mb-0 text-center">
+              <li class="list-inline-item">
+                <a class="btn btn-primary" href="https://docs.microsoft.com/en-us/dotnet/framework/wpf/">
+                  <i>WPF</i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-primary" href="https://docs.microsoft.com/en-us/dotnet/csharp/">
+                  <i>C#</i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-primary" href="https://docs.microsoft.com/en-us/dotnet/framework/wpf/advanced/xaml-overview-wpf">
+                  <i>XAML</i>
+                </a>
+              </li>
+            </ul>
+            <br>
+            <a class="btn btn-secondary btn-lg rounded-pill portfolio-modal-dismiss" href="" style="width:125px">
+              <i class="fas fa-arrow-circle-left"></i>
+              &nbsp;Back</a>
+            <a class="btn btn-secondary btn-lg rounded-pill" href="https://github.com/msautter/Self-Checkout" style="width:125px">
+              <i class="fab fa-github"></i>
+              &nbsp;View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 2 -->
+  <div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
+    <div class="portfolio-modal-dialog bg-white" style="border-radius: 40px;">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="" style="left:30px; top:30px">
+        <i class="fas fa-arrow-circle-left" style="font-size: 50px"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-secondary text-uppercase mb-0">Smart Closet</h2>
+            <hr class="star-dark mb-5">
+            <img class="img-fluid mb-5" src="{% static 'portfolio/imgs/icons/smartwardrobe.png' %}" alt="Smart Wardrobe" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
+            <p class="mb-5">Desktop application for displaying user's clothing. Connects to MySQL database on web
+              server and creates objects of items at runtime. Allows user to create outfits and save them to the
+              database.</p>
+            <ul class="list-inline mb-0 text-center">
+              <li class="list-inline-item">
+                <a class="btn btn-primary" href="https://docs.microsoft.com/en-us/dotnet/framework/wpf/">
+                  <i>WPF</i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-primary" href="https://docs.microsoft.com/en-us/dotnet/csharp/">
+                  <i>C#</i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-primary" href="https://www.mysql.com/">
+                  <i>MySQL</i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-primary" href="http://flask.pocoo.org/">
+                  <i>Flask</i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-primary" href="https://www.python.org/">
+                  <i>Python</i>
+                </a>
+              </li>
+            </ul>
+            <br>
+            <a class="btn btn-secondary btn-lg rounded-pill portfolio-modal-dismiss" href="" style="width:125px">
+              <i class="fas fa-arrow-circle-left"></i>
+              &nbsp;Back</a>
+            <a class="btn btn-secondary btn-lg rounded-pill" href="https://github.com/msautter/Smart-Closet" style="width:125px">
+              <i class="fab fa-github"></i>
+              &nbsp;View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 3 -->
+  <div class="portfolio-modal mfp-hide" id="portfolio-modal-3">
+    <div class="portfolio-modal-dialog bg-white" style="border-radius: 40px;">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="" style="left:30px; top:30px">
+        <i class="fas fa-arrow-circle-left" style="font-size: 50px"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-secondary text-uppercase mb-0">Spotify Stats</h2>
+            <hr class="star-dark mb-5">
+            <img class="img-fluid mb-5" src="{% static 'portfolio/imgs/icons/spotifystats.png' %}" alt="Spotify Stats" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
+            <p class="mb-5">React App for displaying a Spotify user's top tracks, albums, and artists. Front-end built
+              with JavaScript, HTML, CSS and back-end with Express, Node.js, and OAuth 2.0 Authentication.</p>
+            <ul class="list-inline mb-0 text-center">
+              <li class="list-inline-item">
+                <a class="btn btn-primary" href="https://reactjs.org/">
+                  <i>React</i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-primary" href="https://www.javascript.com/">
+                  <i>JavaScript</i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-primary" href="https://developer.spotify.com/documentation/web-api/">
+                  <i>Spotify Web API</i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-primary" href="https://nodejs.org/en/">
+                  <i>Node.js</i>
+                </a>
+              </li>
+            </ul>
+            <br>
+            <a class="btn btn-secondary btn-lg rounded-pill portfolio-modal-dismiss" href="" style="width:125px">
+              <i class="fas fa-arrow-circle-left"></i>
+              &nbsp;Back</a>
+            <a class="btn btn-secondary btn-lg rounded-pill" href="https://github.com/msautter/Spotify-Stats" style="width:125px">
+              <i class="fab fa-github"></i>
+              &nbsp;View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 4 -->
+  <div class="portfolio-modal mfp-hide" id="portfolio-modal-4">
+    <div class="portfolio-modal-dialog bg-white" style="border-radius: 40px;">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="" style="left:30px; top:30px">
+        <i class="fas fa-arrow-circle-left" style="font-size: 50px"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-secondary text-uppercase mb-0">Web Server</h2>
+            <hr class="star-dark mb-5">
+            <img class="img-fluid mb-5" src="{% static 'portfolio/imgs/icons/webserver.png' %}" alt="Web Server" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
+            <p class="mb-5">Personal LEMP Stack (Linux, Nginx, MySQL, PHP) server deployed on Digital Ocean. Hosts
+              portfolio page, Flask REST API, and several databases for projects.
+            </p>
+            <ul class="list-inline mb-0 text-center">
+              <li class="list-inline-item">
+                <a class="btn btn-primary" href="http://releases.ubuntu.com/18.04/">
+                  <i>Ubuntu 18.04</i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-primary" href="https://www.nginx.com/">
+                  <i>Nginx</i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-primary" href="https://www.mysql.com/">
+                  <i>MySQL</i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-primary" href="https://php.net">
+                  <i>PHP</i>
+                </a>
+              </li>
+            </ul>
+            <br>
+            <a class="btn btn-secondary btn-lg rounded-pill portfolio-modal-dismiss" href="" style="width:125px">
+              <i class="fas fa-arrow-circle-left"></i>
+              &nbsp;Back</a>
+            <a class="btn btn-secondary btn-lg rounded-pill" href="https://github.com/msautter/Personal-Website-2.0"
+              style="width:125px">
+              <i class="fab fa-github"></i>
+              &nbsp;View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 5 -->
+  <div class="portfolio-modal mfp-hide" id="portfolio-modal-5">
+    <div class="portfolio-modal-dialog bg-white" style="border-radius: 40px;">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="" style="left:30px; top:30px">
+        <i class="fas fa-arrow-circle-left" style="font-size: 50px"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-secondary text-uppercase mb-0">Coming Soon</h2>
+            <hr class="star-dark mb-5">
+            <img class="img-fluid mb-5" src="{% static 'portfolio/imgs/icons/chip.png' %}" alt="Coming Soon" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
+            <p class="mb-5">Project in development.</p>
+            <a class="btn btn-secondary btn-lg rounded-pill portfolio-modal-dismiss" href="" style="width:125px">
+              <i class="fas fa-arrow-circle-left"></i>
+              &nbsp;Back</a>
+            <a class="btn btn-secondary btn-lg rounded-pill" href="" style="width:125px">
+              <i class="fab fa-github"></i>
+              &nbsp;View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 6 -->
+  <div class="portfolio-modal mfp-hide" id="portfolio-modal-6">
+    <div class="portfolio-modal-dialog bg-white" style="border-radius: 40px;">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="" style="left:30px; top:30px">
+        <i class="fas fa-arrow-circle-left" style="font-size: 50px"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-secondary text-uppercase mb-0">Forum API</h2>
+            <hr class="star-dark mb-5">
+            <img class="img-fluid mb-5" src="{% static 'portfolio/imgs/icons/forumAPI.png' %}" alt="" style="border-top-left-radius: 500px; border-top-right-radius: 500px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;  width: 500px;">
+            <p class="mb-5">Flask API for web-backend engineering course. Implements a SQLite Database in the
+              following:<br>(1) Default SQL Database (2) Partitioned SQL Database (3) NoSQL Database with ScyllaDB</p>
+            <ul class="list-inline mb-0 text-center">
+              <li class="list-inline-item">
+                <a class="btn btn-primary" href="https://www.python.org/">
+                  <i>Python</i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-primary" href="http://flask.pocoo.org/">
+                  <i>Flask</i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-primary" href="https://www.sqlite.org/index.html">
+                  <i>SQLite3</i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-primary" href="http://cassandra.apache.org/">
+                  <i>NoSQL</i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-primary" href="https://www.scylladb.com/">
+                  <i>ScyllaDB</i>
+                </a>
+              </li>
+            </ul>
+            <br>
+            <a class="btn btn-secondary btn-lg rounded-pill portfolio-modal-dismiss" href="" style="width:125px">
+              <i class="fas fa-arrow-circle-left"></i>
+              &nbsp;Back</a>
+            <a class="btn btn-secondary btn-lg rounded-pill" href="https://github.com/msautter/Forum-API" style="width:125px">
+              <i class="fab fa-github"></i>
+              &nbsp;View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'portfolio/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'portfolio/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="{% static 'portfolio/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'portfolio/vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="{% static 'portfolio/js/jqBootstrapValidation.js' %}"></script>
+  <script src="{% static 'portfolio/js/contact_me.js' %}"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'portfolio/js/freelancer.min.js' %}"></script>
+
+</body>
+
+</html>
