@@ -1,1 +1,1 @@
-Personal Website 2.0
+Django App for https://mareksautter.com
