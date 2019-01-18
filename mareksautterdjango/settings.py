@@ -22,10 +22,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = str(os.environ['mareksautterdjangokey'])
 
+DEBUG = False
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = ['167.99.161.3', 'mareksautter.com', 'localhost']
+
+ALLOWED_HOSTS = [str(os.environ['mareksautterip']), 'mareksautter.com', 'masautt.com']
 
 
 # Application definition
@@ -77,7 +78,7 @@ WSGI_APPLICATION = 'mareksautterdjango.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mareksautterdb',
+        'NAME': str(os.environ['mareksautterdb']),
         'USER': str(os.environ['mareksautterdbuser']),
         'PASSWORD': str(os.environ['mareksautterdbpw']),
         'HOST': 'localhost',
@@ -122,8 +123,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/html/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    '/var/www/html',
-]
+STATIC_URL = '/static/'
+# STATICFILES_DIRS = [ os.path.join(BASE_DIR, "static"), '/var/www/html', ]
+
+MEDIA_URL = '/media/'
+STATIC_ROOT = '/home/eldoubleok/website-2019/static/'
+MEDIA_ROOT = '/home/eldoubleok/website-2019/media/'
+SATICFILES_DIRS = (
+    '/home/eldoubleok/website-2019/static/',
+)
+# STATIC_ROOT = "/var/www/html"
