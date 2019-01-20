@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = str(os.environ['mareksautterdjangokey'])
 
-DEBUG = False
+DEBUG = True
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
@@ -75,16 +75,25 @@ WSGI_APPLICATION = 'mareksautterdjango.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+# FOR SQLITE3
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': str(os.environ['mareksautterdb']),
-        'USER': str(os.environ['mareksautterdbuser']),
-        'PASSWORD': str(os.environ['mareksautterdbpw']),
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.testbase'),
     }
 }
+
+# FOR THE POSTGRESQL
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': str(os.environ['mareksautterdb']),
+#         'USER': str(os.environ['mareksautterdbuser']),
+#         'PASSWORD': str(os.environ['mareksautterdbpw']),
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
 
 # Password validation
@@ -124,12 +133,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATICFILES_DIRS = [ os.path.join(BASE_DIR, "static"), '/var/www/html', ]
-
 MEDIA_URL = '/media/'
-STATIC_ROOT = '/home/eldoubleok/website-2019/static/'
-MEDIA_ROOT = '/home/eldoubleok/website-2019/media/'
+STATIC_ROOT = '{}static/'.format(str(os.environ['mareksautterdir']))
+MEDIA_ROOT = '{}media/'.format(str(os.environ['mareksautterdir']))
 SATICFILES_DIRS = (
-    '/home/eldoubleok/website-2019/static/',
+    '{}static/'.format(str(os.environ['mareksautterdir'])),
 )
-# STATIC_ROOT = "/var/www/html"
