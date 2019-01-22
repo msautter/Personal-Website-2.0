@@ -22,11 +22,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = str(os.environ['mareksautterdjangokey'])
 
-DEBUG = True
+DEBUG = False
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
-ALLOWED_HOSTS = [str(os.environ['mareksautterip']), 'mareksautter.com', 'masautt.com']
+ALLOWED_HOSTS = [str(os.environ['mareksautterip']), 'mareksautter.com', 'masautt.com', 'www.mareksautter.com', 'www.masautt.com']
 
 
 # Application definition
