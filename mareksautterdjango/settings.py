@@ -22,11 +22,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = str(os.environ['mareksautterdjangokey'])
 
-DEBUG = False
+DEBUG = str(os.environ['mareksautterdebug'])
+
 # SECURITY WARNING: don't run with debug turned on in production!
 
-
-ALLOWED_HOSTS = [str(os.environ['mareksautterip']), 'mareksautter.com', 'masautt.com', 'www.mareksautter.com', 'www.masautt.com']
+if str(os.environ['mareksauttermachine']) == 'work':
+    ALLOWED_HOSTS = ['127.0.0.1']
+else:
+    ALLOWED_HOSTS = [str(os.environ['mareksautterip']), 'mareksautter.com', 'masautt.com', 'www.mareksautter.com', 'www.masautt.com']
 
 
 # Application definition
@@ -132,10 +135,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
-STATIC_ROOT = '{}static/'.format(str(os.environ['mareksautterdir']))
-MEDIA_ROOT = '{}media/'.format(str(os.environ['mareksautterdir']))
-SATICFILES_DIRS = (
-    '{}static/'.format(str(os.environ['mareksautterdir'])),
-)
+if str(os.environ['mareksauttermachine']) == 'work':
+    STATIC_URL = '/static/'
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, "static")
+    ]
+else:
+    STATIC_URL = '/static/'
+    MEDIA_URL = '/media/'
+    STATIC_ROOT = '{}static/'.format(str(os.environ['mareksautterdir']))
+    MEDIA_ROOT = '{}media/'.format(str(os.environ['mareksautterdir']))
+    SATICFILES_DIRS = (
+        '{}static/'.format(str(os.environ['mareksautterdir'])),
+    )
